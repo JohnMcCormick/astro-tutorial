@@ -80,3 +80,8 @@ html {
         display: none;
       }
   }
+
+  /* posts */
+.post-description {
+    font-weight: bold;
+}
