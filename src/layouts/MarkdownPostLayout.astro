@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
     <slot />
     <p>
         Tags: {
-            frontmatter.tags.slice(0, -1).map((tag) => <span>{tag}, </span>)
-        }<span>{frontmatter.tags[frontmatter.tags.length - 1]}</span>
+            frontmatter.tags.slice(0, -1).map((tag) => <span><a href={`../tags/${tag}`}>{tag}</a>, </span>)
+        }<span><a href={`../tags/${frontmatter.tags[frontmatter.tags.length - 1]}`}>{frontmatter.tags[frontmatter.tags.length - 1]}</a></span>
     </p>
 </BaseLayout>
